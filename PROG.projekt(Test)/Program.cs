@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection.PortableExecutable;
 
 namespace MyApp
 {
@@ -8,17 +9,15 @@ namespace MyApp
         static void Main(string[] args)
         {
             StreamReader subor = new StreamReader("C:\\Users\\kille\\Desktop\\SW-test.txt");
+            string riadok;
+            int cisloriadku = 0;
 
-            while (true)
-            {
-                string test = subor.ReadLine();
-
-                if (test == null)
-                    break;
-
-                Console.WriteLine(test);
-            }
-            subor.Close();
+                while (cisloriadku < 5 && (riadok = subor.ReadLine()) != null)
+                {
+                    Console.WriteLine(riadok);
+                    cisloriadku++;
+                }
+                subor.Close();
         }
     }
 }
