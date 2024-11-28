@@ -16,7 +16,9 @@ namespace MyApp
             string riadok2 = File.ReadLines("C:\\Users\\kille\\Desktop\\SW-test.txt").ElementAt(12 - 1);
             string riadok3 = File.ReadLines("C:\\Users\\kille\\Desktop\\SW-test.txt").ElementAt(18 - 1);
 
-            Console.WriteLine("VITAJ V TOMTO STAR WARS KVIZE. Pre zaciatok stlac ENTER.");
+            Console.WriteLine("VITAJ V TOMTO TESTE.");
+            Console.WriteLine("Pre začiatok stlač ENTER.");
+            Console.WriteLine("=======================================");
             Console.ReadKey();
 
 
@@ -26,13 +28,14 @@ namespace MyApp
                 cisloriadku++;
             }
             
-            Console.WriteLine("zadaj svoju odpoved:");
+            Console.WriteLine("Zadaj svoju odpoveď:");
             string odpoved = Console.ReadLine();
             
             while(true)
             {
                 if (odpoved == riadok1)
                 {
+                    Console.WriteLine("---------------------------------------");
                     if ((riadok = subor.ReadLine()) != null)
                     {
                         cisloriadku++;
@@ -47,18 +50,19 @@ namespace MyApp
                 else
                 {
                     PocetNespravnychOdpovedi++;
-                    Console.WriteLine("nespravna odpoved, zadaj odpoved znova ");
+                    Console.WriteLine("Nesprávna odpoveď, zadaj odpoveď znova!");
                     odpoved = Console.ReadLine();
                 }
             }
-            
-            Console.WriteLine("zadaj svoju odpoved:");
+
+            Console.WriteLine("Zadaj svoju odpoveď:");
             string odpoved2 = Console.ReadLine();
 
             while (true)
             {
                 if (odpoved2 == riadok2)
                 {
+                    Console.WriteLine("---------------------------------------");
                     if ((riadok = subor.ReadLine()) != null)
                     {
                         cisloriadku++;
@@ -73,30 +77,27 @@ namespace MyApp
                 else
                 {
                     PocetNespravnychOdpovedi++;
-                    Console.WriteLine("nespravna odpoved, zadaj odpoved znova ");
+                    Console.WriteLine("Nesprávna odpoveď, zadaj odpoveď znova!");
                     odpoved2 = Console.ReadLine();
                 }
             }
 
-            Console.WriteLine("zadaj svoju odpoved:");
+            Console.WriteLine("Zadaj svoju odpoveď:");
             string odpoved3 = Console.ReadLine();
 
             while (true)
             {
                 if (odpoved3 == riadok3)
-                {
-                    if ((riadok = subor.ReadLine()) != null)
-                    {
-                        cisloriadku++;
-                    }
-                    Console.WriteLine("uspesne si zvladol test. huraaaaaaaa");
-                    Console.WriteLine("Mal si " + PocetNespravnychOdpovedi + " nespravnych odpovedi");
+                { 
+                    Console.WriteLine("Úspešne si zvládol test. Huraaaaaa.");
+                    Console.WriteLine("Mal si " + PocetNespravnychOdpovedi + " nesprávnych odpovedí");
+                    Console.WriteLine("=======================================");
                     break;
                 }
                 else
                 {
                     PocetNespravnychOdpovedi++;
-                    Console.WriteLine("nespravna odpoved, zadaj odpoved znova ");
+                    Console.WriteLine("Nesprávna odpoveď, zadaj odpoveď znova!");
                     odpoved3 = Console.ReadLine();
                 }
             }
